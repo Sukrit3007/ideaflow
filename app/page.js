@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="min-h-screen min-w-screen flex flex-col justify-center relative items-center">
+      <div className="min-h-screen min-w-screen flex flex-col justify-center relative items-center ">
         {/* Background images */}
         <div className="min-h-screen min-w-full relative">
           <Image
@@ -29,7 +29,7 @@ export default function Home() {
             <Image
               src={round1}
               alt=''
-              className='min-w-full min-h-full bg-cover bg-center absolute left-0 right-0 bottom-0 -z-30 sm:-z-20 md:-z-20 lg:-z-20 xl:-z-20 2xl:-z-30 opacity-30'
+              className='min-w-full min-h-full bg-cover bg-center absolute left-0 right-0 bottom-0 -z-30 sm:-z-20 md:-z-30 lg:-z-30 xl:-z-30 2xl:-z-30 opacity-30'
             />
             <Image
               src={round2}

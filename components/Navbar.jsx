@@ -15,7 +15,7 @@ import { Button } from './ui/button';
 
 const Navbar = () => {
   return (
-    <nav className="bg-transparent border-gray-200 dark:bg-gray-900">
+    <nav className="bg-transparent border-gray-200 dark:bg-gray-900 ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center">
           
@@ -37,11 +37,11 @@ const Navbar = () => {
               size="icon"
               data-collapse-toggle="navbar-default"
               type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden bg-zinc-600"
               aria-controls="navbar-default"
               aria-expanded="false"
             >
-              <HamburgerMenuIcon className="bg-white" />
+              <HamburgerMenuIcon className="bg-zinc-600 text-white" />
             </Button>
           </SheetTrigger>
           <SheetContent>
@@ -62,12 +62,12 @@ const Navbar = () => {
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-3xl md:flex-row md:space-x-8 md:mt-0">
             <li>
-              <Button variant="ghost" className="text-white rounded-3xl">
+              <Button variant="link" className="text-white rounded-3xl">
                 Home
               </Button>
             </li>
             <li>
-              <Button variant="ghost" className="text-blue-600 rounded-3xl">
+              <Button variant="link" className="text-teal-400  rounded-3xl">
                 We’re Hiring! JS, iOS+
               </Button>
             </li>
