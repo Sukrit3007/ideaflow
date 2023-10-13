@@ -5,6 +5,7 @@ import img2 from '../../public/reviwers/img2.svg'
 import img3 from '../../public/reviwers/img3.svg'
 import trustlogo from '../../public/reviwers/trustlogo.svg'
 import ReviewsCard from './components/ReviewsCard'
+import dynamic from "next/dynamic";
 
 const Reviews = () => {
   return (
@@ -39,4 +40,5 @@ const Reviews = () => {
   )
 }
 
-export default Reviews
+
+export default dynamic (() => Promise.resolve(Reviews), {ssr: false})

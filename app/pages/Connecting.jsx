@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import connectImg from '../../public/connect-img.svg'
+import dynamic from "next/dynamic";
+
 const Connecting = () => {
   return (
     <div className='w-screen bg-white '>
@@ -29,4 +31,5 @@ const Connecting = () => {
   )
 }
 
-export default Connecting
+
+export default dynamic (() => Promise.resolve(Connecting), {ssr: false})

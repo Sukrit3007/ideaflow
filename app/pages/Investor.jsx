@@ -4,6 +4,7 @@ import investor1 from '../../public/investors/img1.svg'
 import investor2 from '../../public/investors/img2.svg'
 import investor3 from '../../public/investors/img3.svg'
 import investor4 from '../../public/investors/img4.svg'
+import dynamic from "next/dynamic";
 
 const Investor = () => {
   return (
@@ -41,4 +42,5 @@ const Investor = () => {
   )
 }
 
-export default Investor
+
+export default dynamic (() => Promise.resolve(Investor), {ssr: false})

@@ -10,6 +10,7 @@ import round1 from '../public/Bg/round1.svg'
 import round2 from '../public/Bg/round2.svg'
 import round3 from '../public/Bg/round3.svg'
 
+
 export default function Home() {
 
   return (
@@ -26,14 +27,17 @@ export default function Home() {
           {/* Square shape overlay */}
             <Image
               src={round1}
+              alt=''
               className='min-w-full min-h-full bg-cover bg-center absolute left-0 right-0 bottom-0 -z-30 sm:-z-20 md:-z-20 lg:-z-20 xl:-z-20 2xl:-z-30 opacity-30'
             />
             <Image
               src={round2}
+              alt=''
               className='min-w-full min-h-full bg-cover bg-center absolute left-0 right-0 bottom-0 -z-30 opacity-40'
             />
             <Image
               src={round3}
+              alt=''
               className='min-w-full min-h-full bg-cover bg-center absolute left-0 right-0 bottom-0 -z-30 opacity-30'
             />
           

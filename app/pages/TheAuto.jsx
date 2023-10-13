@@ -1,12 +1,14 @@
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import { ArrowRightIcon } from "@radix-ui/react-icons"
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Image from 'next/image';
-import autoimg from '../../public/the-auto-img.svg'
+import autoimg from '../../public/the-auto-img.svg';
+import dynamic from "next/dynamic";
+
 
 const TheAuto = () => {
   return (
-    <div className= 'min-w-full bg-white'>
+    <div className="min-w-full bg-white">
       <div className="container mx-auto flex flex-col items-center py-16 lg:flex-row lg:justify-center gap-y-8">
         <div className="lg:w-1/2 lg:pr-10 order-2 lg:order-1">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-left text-black">
@@ -29,7 +31,8 @@ const TheAuto = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TheAuto
+
+export default dynamic (() => Promise.resolve(TheAuto), {ssr: false})

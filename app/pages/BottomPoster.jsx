@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import React from 'react';
+import dynamic from "next/dynamic";
 
 
 const BottomPoster = () => {
@@ -29,4 +30,5 @@ const BottomPoster = () => {
   );
 };
 
-export default BottomPoster;
+
+export default dynamic (() => Promise.resolve(BottomPoster), {ssr: false})

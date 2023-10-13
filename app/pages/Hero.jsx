@@ -4,6 +4,7 @@ import Image from 'next/image';
 import heroimg from '../../public/3D Sculpture Head 2.svg';
 import { TwitterLogoIcon } from '@radix-ui/react-icons';
 import '../globals.css';
+import dynamic from "next/dynamic";
 
 
 const Hero = () => {
@@ -36,4 +37,5 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+
+export default dynamic (() => Promise.resolve(Hero), {ssr: false})
