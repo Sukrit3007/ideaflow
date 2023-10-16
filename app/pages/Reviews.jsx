@@ -10,7 +10,7 @@ import dynamic from "next/dynamic";
 const Reviews = () => {
   return (
       <div className='min-h-screen min-w-full flex flex-col justify-center items-center  bg-white py-20'>
-        <div className='min-w-min min-h-fit flex flex-col  items-center gap-x-6 gap-y-10 sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row '>
+        <div className='min-w-min min-h-fit flex flex-col  items-center gap-x-6 gap-y-10 sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row'>
           <ReviewsCard 
           img ={img1} 
           stars={stars} 

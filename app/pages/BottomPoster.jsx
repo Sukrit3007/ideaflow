@@ -7,9 +7,9 @@ const BottomPoster = () => {
   const backgroundImageUrl = '/banner.png'; 
 
   return (
-    <div className='min-w-full min-h-fit flex flex-col justify-center items-center bg-white py-8 px-2 sm:px-10 md:px-14 lg:px-16 xl:px-20'> 
+    <div className='min-w-full min-h-fit flex flex-col justify-center items-center bg-white py-8 px-2 sm:px-10 md:px-14 lg:px-16 xl:px-20 '> 
       <div
-        className="rounded-3xl min-w-full "
+        className="rounded-3xl min-w-full transform transition duration-500 hover:scale-105"
         style={{
           backgroundImage: `url(${backgroundImageUrl})`, 
           backgroundSize: 'cover', 

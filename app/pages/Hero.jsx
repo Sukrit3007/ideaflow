@@ -40,7 +40,7 @@ const Hero = () => {
           <Button className="text-white" variant="ghost">Newsletter</Button>
           </div>
         </div>
-        <div className="lg:w-1/2 flex justify-center">
+        <div className="lg:w-1/2 flex justify-center transform transition duration-500 hover:scale-105">
           <Image src={heroimg} alt="heroImage" width="340px" height="715px" />
         </div>
       </div>

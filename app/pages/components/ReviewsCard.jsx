@@ -13,8 +13,14 @@ import dynamic from "next/dynamic";
 
   
 const ReviewsCard = (props) => {
+  const cardStyles = {
+    transition: 'transform 0.2s ease',
+    '&:hover': {
+      transform: 'scale(1.05)', // Scale up on hover
+    },
+  };
   return (
-        <div className='max-w-xs'>
+        <div className='max-w-xs transform transition duration-500 hover:scale-105'>
           <Card >
 
           <CardHeader className='h-20'>

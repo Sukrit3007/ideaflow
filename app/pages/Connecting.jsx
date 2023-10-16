@@ -7,7 +7,7 @@ const Connecting = () => {
   return (
     <div className='w-screen bg-white '>
       <div className="container mx-auto flex flex-col items-center py-16 lg:flex-row lg:justify-center gap-y-8 ">     
-        <div className="lg:w-1/2 flex justify-center">
+        <div className="lg:w-1/2 flex justify-center transform transition duration-500 hover:scale-105">
           <Image
             src={connectImg}
             alt='Connect Image'

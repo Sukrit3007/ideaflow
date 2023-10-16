@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import navlogo from '../public/ideaflow.svg';
@@ -14,8 +15,35 @@ import {
 import { Button } from './ui/button';
 
 const Navbar = () => {
+  const [scrolling, setScrolling] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      if (currentScrollPos > prevScrollPos) {
+        setScrolling(true); // Scrolling down, hide the navbar
+      } else {
+        setScrolling(false); // Scrolling up, show the navbar
+      }
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
   return (
-    <nav className="bg-transparent border-gray-200 dark:bg-gray-900 ">
+    <div>
+       <nav
+        className={`${
+          scrolling ? 'hidden' : 'block'
+        } bg-current opacity-90 rounded-b-3xl border-gray-200 dark:bg-gray-900 fixed top-0 w-full z-10 transition-all duration-500 ease-in-out`}
+      >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center">
           
@@ -83,6 +111,8 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    </div>
+    
   );
 };
 

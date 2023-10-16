@@ -20,7 +20,7 @@ const TheAuto = () => {
             Learn More <ArrowRightIcon className="mr-2 h-4 w-4" />
           </Button>
         </div>
-        <div className="lg:w-1/2 flex justify-center order-1 lg:order-2">
+        <div className="lg:w-1/2 flex justify-center order-1 lg:order-2 transform transition duration-500 hover:scale-105">
           <Image
             src={autoimg}
             alt='heroImage'
